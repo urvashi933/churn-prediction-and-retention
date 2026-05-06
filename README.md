@@ -1,4 +1,7 @@
-# Customer Churn Prediction and Retention Strategy
+# 🚀 Customer Churn Prediction and Retention Strategy
+
+> [!NOTE]
+> This project provides a comprehensive data science solution to identify at-risk customers for a telecom/subscription business and recommends actionable retention strategies based on predictive modeling and behavioral analysis.
 
 ## 1. Business Problem Understanding
 
@@ -6,13 +9,13 @@
 Customer churn refers to the rate at which customers stop doing business with an entity. In a subscription-based or telecom company, it is the cancellation of service by a customer.
 
 **Why is Churn a Business Problem?**
-Losing customers directly impacts recurring revenue and profitability. Acquiring new customers is generally 5-25 times more expensive than retaining existing ones. High churn rates can significantly hurt a company's bottom line and indicate underlying issues with customer satisfaction or product-market fit.
+Losing customers directly impacts recurring revenue and profitability. Acquiring new customers is generally **5-25 times more expensive** than retaining existing ones. High churn rates indicate underlying issues with customer satisfaction or product-market fit.
 
 **Why Predicting Churn is Useful?**
-By predicting which customers are likely to churn, a company can proactively target them with retention campaigns (discounts, better service, engagement). This targeted approach is much more cost-effective than blanket retention offers to all customers.
+Predictive modeling allows the business to proactively target at-risk customers with retention campaigns (discounts, better service, engagement). This targeted approach is significantly more cost-effective than blanket offers.
 
 **Why Customer Retention is Important?**
-Retained customers tend to buy more over time, refer others, and cost less to serve than acquiring new ones. Increasing retention rates by just 5% can increase profits by 25% to 95%.
+Increasing retention rates by just 5% can increase profits by **25% to 95%**. Retained customers tend to refer others and cost less to serve over time.
 
 **Why False Negatives are Costly:**
 In churn prediction, a **False Negative** occurs when the model predicts a customer will *not* churn, but they actually *do*. This is highly costly because the company will not intervene, thereby losing the customer and the associated revenue. A False Positive (predicting churn when they won't) only costs the price of a retention offer/discount. Therefore, minimizing False Negatives (maximizing Recall) is critical.
@@ -146,8 +149,10 @@ We built and evaluated two classification models:
 
 ## 7. Final Model Selection
 
-**Final Choice: Logistic Regression**
-While both models have similar accuracy, Logistic Regression achieved a better **Recall** score. For churn prediction, **Recall matters most** because the cost of a False Negative (losing a customer entirely) is far greater than the cost of a False Positive (giving a discount to a loyal customer). Logistic Regression captures more true churners.
+**🏆 Winner: Logistic Regression**
+
+**Why?**
+While all models show similar accuracy, **Logistic Regression** achieved the highest **Recall (0.5581)**. In churn management, missing a customer who is about to leave is much more costly than offering a discount to someone who wasn't going to leave. Logistic Regression is also highly interpretable for business stakeholders.
 
 ---
 
@@ -191,13 +196,14 @@ Based on EDA and model feature importance, the highest-risk customers are those 
 
 ## 10. How to Run the Project
 
-1. Clone this repository.
-2. Install the required dependencies:
+1. **Install Dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
-3. Run the main pipeline script:
+2. **Execute Pipeline:**
    ```bash
    python main.py
    ```
-4. The script will output the model evaluation metrics to the console. It will save all EDA and Confusion Matrix plots in the `images/` directory, and it will save the customer churn risk predictions (with calculated risk probabilities) to the `outputs/` directory as `churn_risk_predictions.csv`.
+3. **View Results:**
+   - EDA & Confusion Matrices: `images/`
+   - Risk Predictions: `outputs/churn_risk_predictions.csv`
