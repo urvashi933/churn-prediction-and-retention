@@ -158,8 +158,7 @@ def main():
     print("\nDeveloping Predictive Models...")
     models = {
         "Logistic Regression": LogisticRegression(random_state=42, max_iter=1000),
-        "Random Forest": RandomForestClassifier(random_state=42, n_estimators=100),
-        "Decision Tree": DecisionTreeClassifier(random_state=42, max_depth=5)
+        "Random Forest": RandomForestClassifier(random_state=42, n_estimators=100)
     }
     
     results = {}
