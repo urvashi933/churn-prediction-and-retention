@@ -111,9 +111,10 @@ The dataset (`dataset/part_3_customer_churn_prediction.csv`) contains 1,800 reco
 
 ## 5. Models Used
 
-We built and evaluated two classification models:
+We built and evaluated three classification models:
 1. **Logistic Regression:** A linear model that provides excellent interpretability and probabilities for churn risk.
-2. **Random Forest Classifier:** An ensemble tree-based model that captures non-linear relationships and feature interactions well.
+2. **Decision Tree Classifier:** A tree-based model that creates simple decision rules from features.
+3. **Random Forest Classifier:** An ensemble tree-based model that captures non-linear relationships and feature interactions well.
 
 ---
 
@@ -127,6 +128,15 @@ We built and evaluated two classification models:
 
 ![Confusion Matrix Logistic Regression](images/cm_logistic_regression.png)
 **Interpretation:** The Logistic Regression model correctly predicts 211 retained customers and 53 churned customers. However, it still misclassifies some customers, leading to 42 False Positives and 54 False Negatives.
+
+**Decision Tree:**
+- Accuracy: ~0.65
+- Precision: ~0.51
+- Recall: ~0.48
+- F1 Score: ~0.49
+
+![Confusion Matrix Decision Tree](images/cm_decision_tree.png)
+**Interpretation:** The Decision Tree model correctly predicts 171 retained customers and 62 churned customers. It has a higher number of False Positives (82) and False Negatives (45) compared to the other models, suggesting it may be overfitting or less robust on this dataset.
 
 **Random Forest:**
 - Accuracy: ~0.73
