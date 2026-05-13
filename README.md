@@ -1,4 +1,4 @@
-# 🚀 Customer Churn Prediction and Retention Strategy
+# 🚀 Part 3: Customer Churn Prediction and Retention Strategy
 
 <p align="center">
   <a href="#1-business-problem-understanding"><b>Business Problem</b></a> •
