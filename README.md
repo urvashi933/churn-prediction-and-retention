@@ -30,6 +30,12 @@
 - [✅ Retention Recommendations](#9-retention-recommendations)
 - [🚀 Execution Guide](#10-how-to-run-the-project)
 
+---
+---
+# 📊 Project Title: Customer Churn Prediction and Retention Strategy
+
+---
+
 > [!NOTE]
 > This project provides a comprehensive data science solution to identify at-risk customers for a telecom/subscription business and recommends actionable retention strategies based on predictive modeling and behavioral analysis.
 
