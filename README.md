@@ -1,5 +1,34 @@
 # 🚀 Customer Churn Prediction and Retention Strategy
 
+<p align="center">
+  <a href="#1-business-problem-understanding"><b>Business Problem</b></a> •
+  <a href="#dataset-sources"><b>Sources</b></a> •
+  <a href="#2-data-understanding"><b>Data</b></a> •
+  <a href="#tools-and-libraries"><b>Tools</b></a> •
+  <a href="#steps-performed"><b>Pipeline</b></a> •
+  <a href="#4-exploratory-data-analysis-eda-insights"><b>EDA</b></a> •
+  <a href="#6-model-evaluation-results"><b>Modeling</b></a> •
+  <a href="#9-retention-recommendations"><b>Strategy</b></a> •
+  <a href="#10-how-to-run-the-project"><b>Run Project</b></a>
+</p>
+
+---
+
+## 📌 Navigation
+- [🎯 Business Problem](#1-business-problem-understanding)
+- [🔗 Dataset Sources](#dataset-sources)
+- [📊 Data Understanding](#2-data-understanding)
+- [🛠️ Tools & Libraries](#tools-and-libraries)
+- [⚙️ Pipeline Steps](#steps-performed)
+- [🧹 Data Cleaning & Preprocessing](#3-data-cleaning-and-preprocessing)
+- [🔍 EDA Insights](#4-exploratory-data-analysis-eda-insights)
+- [🤖 Models Used](#5-models-used)
+- [📈 Model Evaluation](#6-model-evaluation-results)
+- [🏆 Final Model Selection](#7-final-model-selection)
+- [💡 Churn Risk Interpretation](#8-churn-risk-interpretation)
+- [✅ Retention Recommendations](#9-retention-recommendations)
+- [🚀 Execution Guide](#10-how-to-run-the-project)
+
 > [!NOTE]
 > This project provides a comprehensive data science solution to identify at-risk customers for a telecom/subscription business and recommends actionable retention strategies based on predictive modeling and behavioral analysis.
 
@@ -19,6 +48,13 @@ Increasing retention rates by just 5% can increase profits by **25% to 95%**. Re
 
 **Why False Negatives are Costly:**
 In churn prediction, a **False Negative** occurs when the model predicts a customer will *not* churn, but they actually *do*. This is highly costly because the company will not intervene, thereby losing the customer and the associated revenue. A False Positive (predicting churn when they won't) only costs the price of a retention offer/discount. Therefore, minimizing False Negatives (maximizing Recall) is critical.
+
+---
+
+## Dataset Sources
+The primary dataset used for this churn analysis is sourced from the following repository:
+- **Direct Link:** [Dataset Folder](https://drive.google.com/drive/folders/1XC-00liRViTlyeFaig3mYTkQcBrheph6?usp=sharing)
+- **Primary File:** `part_3_customer_churn_prediction.csv`
 
 ---
 
@@ -57,6 +93,29 @@ The dataset (`dataset/part_3_customer_churn_prediction.csv`) contains 1,800 reco
 **Problem Type:**
 - **Classification or Regression?** This is a **Classification** problem because the target variable (`Churn`) is discrete (Yes or No).
 - **Why Supervised Learning?** This is a supervised learning problem because we are training the model using a labeled dataset—meaning we already know the ground truth (whether previous customers churned or not) and are using that information to teach the model to make future predictions.
+
+---
+
+## Tools and Libraries
+The following technological stack was utilized for this predictive analysis:
+- **Python (v3.8+):** The primary programming language used for the entire data science pipeline.
+- **Pandas & NumPy:** Core libraries for robust data manipulation, cleaning, and matrix operations.
+- **Scikit-Learn:** Utilized for data preprocessing (`StandardScaler`), model selection (`train_test_split`), and implementing machine learning algorithms (Logistic Regression, Random Forest, Decision Trees).
+- **Matplotlib & Seaborn:** Used for advanced statistical visualizations and generating the project's premium business reporting assets.
+
+---
+
+## Steps Performed
+The project was executed through a structured, end-to-end data science workflow:
+1. **Environment & Dir Setup:** Initialized the project structure and configured premium visual aesthetics for all reporting assets.
+2. **Data Acquisition:** Loaded the raw telecom customer records and performed an initial data audit.
+3. **Data Cleaning & Preprocessing:** Standardized data types, handled missing values in `TotalCharges`, and mapped the target variable to binary numeric format.
+4. **Exploratory Data Analysis (EDA):** Conducted deep-dive visualizations into churn drivers, including contract types, tenure, monthly billing intensity, and payment methods.
+5. **Feature Engineering:** Prepared the data for machine learning using One-Hot Encoding for categorical features and Standardization for numerical variables.
+6. **Predictive Modeling:** Built and trained a suite of classification models (Logistic Regression, Decision Tree, Random Forest) to identify at-risk customers.
+7. **Model Evaluation:** Benchmarked model performance using Accuracy, Precision, Recall, and F1-Score, prioritizing Recall to minimize costly False Negatives.
+8. **Churn Risk Interpretation:** Generated a comprehensive Risk Profile report, categorizing customers into High, Medium, and Low risk tiers based on model probability scores.
+9. **Strategy Formulation:** Translated analytical findings into five specific, data-driven retention recommendations for business stakeholders.
 
 ---
 
